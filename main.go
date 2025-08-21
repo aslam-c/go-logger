@@ -12,7 +12,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
     a,_ :=strconv.Atoi(query.Get("a"))
     b,_ :=strconv.Atoi(query.Get("b"))
     
-    fmt.Fprintf(w, "Hello, %s!%d", time.August,a+b)
+    fmt.Fprintf(w, "ഈ ലിങ്ക് തുറന്നവന് ഊള %s!%d", time.August,a+b)
     
 }
 
