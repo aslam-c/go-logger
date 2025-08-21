@@ -1,9 +1,22 @@
-package gologger
+package main
 
 import (
 	"fmt"
+	"net/http"
+	"strconv"
+	"time"
 )
-func log(msg string){
-	fmt.Println(msg)
+
+func handler(w http.ResponseWriter, r *http.Request) {
+    query:=r.URL.Query()
+    a,_ :=strconv.Atoi(query.Get("a"))
+    b,_ :=strconv.Atoi(query.Get("b"))
+    
+    fmt.Fprintf(w, "Hello, %s!%d", time.August,a+b)
+    
 }
 
+func main() {
+    http.HandleFunc("/", handler)
+    http.ListenAndServe(":8080", nil)
+}
