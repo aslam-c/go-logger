@@ -1,1 +1,3 @@
-Just a logger of your msg
+## to run
+
+- go run app.go
