@@ -24,5 +24,4 @@ func HandleReadiness(w http.ResponseWriter,r *http.Request){
 
 func handleUserReq(w http.ResponseWriter,r *http.Request){
 	RespondWithJSON(w,200,map[string]string{"hello":"user"})
-	
 }
